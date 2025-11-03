@@ -15,6 +15,8 @@ public class IF {
 
         //carteira();
 
+        numeros();
+
 
 
     }
@@ -143,7 +145,30 @@ public class IF {
     }
 
 
-    
+    public static void numeros(){
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite um numero: ");
+
+        int numero = entrada.nextInt();
+
+        if(numero > 0){
+
+            System.out.println("Eh positivo");
+
+        }
+
+        else if(numero == 0){
+            System.out.println("0 não eh positivo nem negativo");
+        }
+
+        else{
+            System.out.println("Eh negativo");
+        }
+
+        entrada.close();
+    }
 
 
 }
