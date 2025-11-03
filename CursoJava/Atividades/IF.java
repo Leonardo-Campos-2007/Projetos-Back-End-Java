@@ -13,6 +13,10 @@ public class IF {
 
         //cinema();
 
+        //carteira();
+
+
+
     }
 
     public static void adulto() {
@@ -128,6 +132,18 @@ public class IF {
         entrada.close();
 
     }
+
+    public static void carteira(){
+
+        boolean temCarteira = false;
+
+        if(!temCarteira){
+            System.out.println("Voce nao pode dirigir");
+        }
+    }
+
+
+    
 
 
 }
