@@ -15,7 +15,9 @@ public class IF {
 
         //carteira();
 
-        numeros();
+        //numeros();
+
+        //imparPar();
 
 
 
@@ -169,6 +171,31 @@ public class IF {
 
         entrada.close();
     }
+
+    public static void imparPar(){
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite um numero: ");
+
+        int numero = entrada.nextInt();
+
+        if(numero % 2 == 0 && numero != 0){
+            System.out.println("eh par");
+        }
+
+        else if(numero == 0){
+            System.out.println("0 nao eh par nem impar");
+        }
+
+        else{
+            System.err.println("eh impar");
+        }
+
+        entrada.close();
+    }
+
+    
 
 
 }
