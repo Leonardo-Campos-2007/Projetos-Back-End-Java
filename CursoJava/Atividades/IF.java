@@ -9,7 +9,9 @@ public class IF {
 
         // scanner();
 
-        votar();
+        //votar();
+
+        //cinema();
 
     }
 
@@ -101,4 +103,31 @@ public class IF {
         entrada.close();
 
     }
+
+    public static void cinema(){
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Voce tem quantos anos :");
+
+        int idade = entrada.nextInt();
+
+        entrada.nextLine();
+
+        System.out.println("Voce eh estudante ? (sim/nao)");
+
+        String resposta = entrada.nextLine().toLowerCase();
+
+        if(idade < 18 || resposta.equals("sim")){
+            System.out.println("Voce tem direito ao desconto");
+        }
+        else{
+            System.out.println("Voce nao pode receber desconto");
+        }
+
+        entrada.close();
+
+    }
+
+
 }
