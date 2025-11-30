@@ -9,17 +9,17 @@ public class IF {
 
         // scanner();
 
-        //votar();
+        // votar();
 
-        //cinema();
+        // cinema();
 
-        //carteira();
+        // carteira();
 
-        //numeros();
+        // numeros();
 
-        //imparPar();
+        // imparPar();
 
-
+        //maiormenor();
 
     }
 
@@ -112,7 +112,7 @@ public class IF {
 
     }
 
-    public static void cinema(){
+    public static void cinema() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -126,10 +126,9 @@ public class IF {
 
         String resposta = entrada.nextLine().toLowerCase();
 
-        if(idade < 18 || resposta.equals("sim")){
+        if (idade < 18 || resposta.equals("sim")) {
             System.out.println("Voce tem direito ao desconto");
-        }
-        else{
+        } else {
             System.out.println("Voce nao pode receber desconto");
         }
 
@@ -137,17 +136,16 @@ public class IF {
 
     }
 
-    public static void carteira(){
+    public static void carteira() {
 
         boolean temCarteira = false;
 
-        if(!temCarteira){
+        if (!temCarteira) {
             System.out.println("Voce nao pode dirigir");
         }
     }
 
-
-    public static void numeros(){
+    public static void numeros() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -155,24 +153,24 @@ public class IF {
 
         int numero = entrada.nextInt();
 
-        if(numero > 0){
+        if (numero > 0) {
 
             System.out.println("Eh positivo");
 
         }
 
-        else if(numero == 0){
+        else if (numero == 0) {
             System.out.println("0 não eh positivo nem negativo");
         }
 
-        else{
+        else {
             System.out.println("Eh negativo");
         }
 
         entrada.close();
     }
 
-    public static void imparPar(){
+    public static void imparPar() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -180,22 +178,50 @@ public class IF {
 
         int numero = entrada.nextInt();
 
-        if(numero % 2 == 0 && numero != 0){
+        if (numero % 2 == 0 && numero != 0) {
             System.out.println("eh par");
         }
 
-        else if(numero == 0){
+        else if (numero == 0) {
             System.out.println("0 nao eh par nem impar");
         }
 
-        else{
+        else {
             System.err.println("eh impar");
         }
 
         entrada.close();
     }
 
-    
+    public static void maiormenor() {
 
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite um numero: ");
+        double numero1 = entrada.nextDouble();
+
+        System.out.println("Digite outro numero: ");
+        double numero2 = entrada.nextDouble();
+
+        if (numero1 > numero2) {
+
+            System.out.println(numero1 + " eh maior que " + numero2);
+
+        }
+
+        if (numero1 == numero2) {
+
+            System.out.println(numero1 + " eh igual a " + numero2);
+
+        }
+
+        if (numero1 < numero2) {
+
+            System.out.println(numero2 + " veh maior que " + numero1);
+
+        }
+
+        entrada.close();
+    }
 
 }
