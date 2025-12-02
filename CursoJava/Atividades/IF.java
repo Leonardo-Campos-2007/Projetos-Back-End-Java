@@ -19,9 +19,17 @@ public class IF {
 
         // imparPar();
 
-        //maiormenor();
+        // maiormenor();
+
+        // intervalo();
+
+        //multiplo3e5();
+
+        //pn0();
 
     }
+
+    
 
     public static void adulto() {
 
@@ -223,5 +231,61 @@ public class IF {
 
         entrada.close();
     }
+
+    public static void intervalo() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Digite um numero: ");
+        int numero = entrada.nextInt();
+
+        if (numero >= 10 && numero <= 100) {
+
+            System.out.println("O numero digitado está dentro do intervalo de 10 a 100");
+
+        } else {
+            System.out.println("O numero digitado não está presete no intervalo de 10 a 100");
+        }
+
+        entrada.close();
+
+    }
+
+    public static void multiplo3e5() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite um numero : ");
+        int numero = entrada.nextInt();
+
+        if (numero % 3 == 0 && numero % 5 == 0) {
+            System.out.println("Este numero eh divisivel por 3 e 5 ");
+        } else {
+            System.out.println("Este numero não eh divisivel por 3 e 5");
+        }
+
+        entrada.close();
+
+    }
+
+    public static void pn0() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite um valor: ");
+        int numero = entrada.nextInt();
+
+        if (numero > 0) {
+            System.out.println("Este numero eh positivo");
+        } else if (numero == 0) {
+            System.out.println("O numero digitado eh 0");
+        } else {
+            System.out.println("Este numero eh negativo");
+        }
+
+        entrada.close();
+    }
+
+    
 
 }
