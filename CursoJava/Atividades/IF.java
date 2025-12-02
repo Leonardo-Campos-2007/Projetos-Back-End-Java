@@ -23,13 +23,13 @@ public class IF {
 
         // intervalo();
 
-        //multiplo3e5();
+        // multiplo3e5();
 
-        //pn0();
+        // pn0();
+
+        //bixesto();
 
     }
-
-    
 
     public static void adulto() {
 
@@ -286,6 +286,23 @@ public class IF {
         entrada.close();
     }
 
-    
+    public static void bixesto() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite um ano: ");
+        int ano = entrada.nextInt();
+
+        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+
+            System.out.println("Eh bixesto");
+
+        } else {
+            System.out.println("Não eh bixesto");
+        }
+
+        entrada.close();
+
+    }
 
 }
