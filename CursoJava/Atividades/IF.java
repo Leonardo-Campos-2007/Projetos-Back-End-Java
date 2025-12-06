@@ -27,7 +27,11 @@ public class IF {
 
         // pn0();
 
-        //bixesto();
+        // bixesto();
+
+        //escola();
+
+        vogal();
 
     }
 
@@ -303,6 +307,48 @@ public class IF {
 
         entrada.close();
 
+    }
+
+    public static void escola() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite a nota do aluno: ");
+        
+        double nota1 = entrada.nextDouble();
+
+        System.out.print("Digite a segunda nota do aluno: ");
+
+        double nota2 = entrada.nextDouble();
+
+        double nota = ((nota1 + nota2)/2);
+
+        if (nota >= 7.0) {
+            System.err.println("Sua nota foi " + nota + " Aprovado!!!");
+        } else if (nota >= 5.0 && nota <= 6.9) {
+            System.out.println("Sua nota foi " + nota + " Precisa fazer reavaliação");
+        } else {
+            System.out.println("Sua nota foi " + nota + " Reprovado");
+        }
+
+        entrada.close();
+    }
+
+    public static void vogal(){
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite 1 letra do alfabeto: ");
+
+        char letra = entrada.next().toLowerCase().charAt(0);
+
+        if(letra == 'a'|| letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+            System.out.println("Eh uma vogal");
+        }else{
+            System.out.println("Eh uma consoante");
+        }
+
+        entrada.close();
     }
 
 }
