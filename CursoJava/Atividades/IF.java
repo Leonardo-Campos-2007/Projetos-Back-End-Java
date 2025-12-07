@@ -31,7 +31,7 @@ public class IF {
 
         //escola();
 
-        vogal();
+        //vogal();
 
     }
 
