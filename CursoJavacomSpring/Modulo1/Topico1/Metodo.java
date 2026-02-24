@@ -1,4 +1,4 @@
-package Modulo1.Topico1;
+/*package Modulo1.Topico1;
 
 public class Metodo {
 
@@ -20,3 +20,5 @@ public class Metodo {
     }
 
 }
+
+ */

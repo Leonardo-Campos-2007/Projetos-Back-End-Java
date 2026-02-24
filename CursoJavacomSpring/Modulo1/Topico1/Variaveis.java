@@ -1,4 +1,4 @@
-package Modulo1.Topico1;
+/*package Modulo1.Topico1;
 
 public class Variaveis {
 
@@ -15,3 +15,5 @@ public class Variaveis {
     }
     
 }
+
+*/
