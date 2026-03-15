@@ -19,7 +19,7 @@ public class UserController {
 
     @PostMapping("/")
     public ResponseEntity creat(@RequestBody UserModel userModel) {
-        var user = this.userRepository.finByUsername(userModel.getUserName());
+        var user = this.userRepository.findByUserName(userModel.getUserName());
 
         if (user != null) {
 

@@ -12,7 +12,7 @@ import jakarta.persistence.Column;
 
 @Data
 @Entity(name = "tb_tasks")
-public class TaskMoldel {
+public class TaskModel {
     
     @Id
     @Generated(value = "UUID")
