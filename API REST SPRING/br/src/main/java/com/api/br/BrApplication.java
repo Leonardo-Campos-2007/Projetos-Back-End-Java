@@ -10,4 +10,8 @@ public class BrApplication {
 		SpringApplication.run(BrApplication.class, args);
 	}
 
+	public void run(String... args) throws Exception {
+		// Code to execute after the application starts
+	}
+
 }
