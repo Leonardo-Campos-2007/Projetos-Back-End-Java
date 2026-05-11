@@ -11,19 +11,26 @@ public class MathController {
     @RequestMapping("/sum/{numberOne}/{numberTwo}")
     public Double sum(
             @PathVariable("numberOne") String numberOne,
-            @PathVariable("numberTwo") String numberTwo
-        ) throws Exception {
+            @PathVariable("numberTwo") String numberTwo) throws Exception {
 
-        if (!isNumeric(numberOne) || !isNumeric(numberTwo) ) throw new IllegalArgumentException();
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo))
+            throw new IllegalArgumentException();
         return convertToDouble(numberOne) + convertToDouble(numberTwo);
     }
 
-    private Double convertToDouble(String number){
-        return 1D;
+    private Double convertToDouble(String strNumber) throws IllegalArgumentException{
+        if (strNumber == null || strNumber.isEmpty())
+            throw new IllegalStateException();
+        String number = strNumber.replace(",", ".");
+        return Double.parseDouble(strNumber);
+        
     }
 
-    private boolean isNumeric(String number){
-        return true;
+    private boolean isNumeric(String strNumber) {
+        if (strNumber == null || strNumber.isEmpty())
+            return false;
+        String number = strNumber.replace(",", ".");
+        return (number.matches("[-+]?[0-9]*\\.?[0-9]+"));
     }
 
 }
