@@ -11,8 +11,19 @@ public class MathController {
     @RequestMapping("/sum/{numberOne}/{numberTwo}")
     public Double sum(
             @PathVariable("numberOne") String numberOne,
-            @PathVariable("numberTwo") String numberTwo) {
+            @PathVariable("numberTwo") String numberTwo
+        ) throws Exception {
+
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo) ) throw new IllegalArgumentException();
+        return convertToDouble(numberOne) + convertToDouble(numberTwo);
+    }
+
+    private Double convertToDouble(String number){
         return 1D;
+    }
+
+    private boolean isNumeric(String number){
+        return true;
     }
 
 }
